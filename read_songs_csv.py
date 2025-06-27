@@ -6,7 +6,7 @@ from typing import Dict
 def get_song_dictionary(filepath: str) -> Dict[str, Song]:
     song_dictionary = {}
 
-    with open(filepath, newline='') as csvfile:
+    with open(filepath, newline='', encoding='latin1') as csvfile:
         reader = csv.reader(csvfile)
         reader.__next__()
         for row in reader:
